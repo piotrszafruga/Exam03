@@ -14,10 +14,10 @@
     </button>
 </form>
 
-<a href="http://localhost:8080/jeeexam3_war_exploded/smurfs">Link - Smurfs</a>
+<a href="http://localhost:8080/jee_exam_3_war_exploded/smurfs">Link - Smurfs</a>
 </br>
-<a href="http://localhost:8080/jeeexam3_war_exploded/addquote">Link - Quote</a>
+<a href="http://localhost:8080/jee_exam_3_war_exploded/addquote">Link - Quote</a>
 </br>
-
+<a href="http://localhost:8080/jee_exam_3_war_exploded/homepage.jsp">Link - Cookie acceptance</a>
 </body>
 </html>

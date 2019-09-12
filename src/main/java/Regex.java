@@ -13,10 +13,10 @@ public class Regex extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String str = request.getParameter("param1");
-        String link = null;
+        System.out.println(str);
         Boolean match = str.matches("^[a-z]+\\.(jpg|git|png)$");
         if (match) {
-            link = "<a href='https://www.google.pl/#q=" + str + "'>Link</a>";
+            String link = "<meta http-equiv='refresh' content='5; url=https://www.google.pl/#q=" + str + "'/>";
             request.setAttribute("link", link);
         }
         getServletContext().getRequestDispatcher("/regex.jsp")

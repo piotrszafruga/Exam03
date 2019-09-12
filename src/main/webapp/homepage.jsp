@@ -1,23 +1,23 @@
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <html>
 <head>
-    <meta charset="UTF-8">
+    <title>Homepage</title>
 </head>
 
 <body>
 
-Informujemy, że ta strona korzysta z plików cookies.
-</br>
-<a href="http://localhost:8080/jeeexam3_war_exploded/homepage">Akceptuj</a>
-</br>
-
-<form action="receiver" method="GET">
-    <button>
-        Submit
-        <input type="hidden" name="name" value="coder">
-        <input type="hidden" name="mail" value="coder@somemail.com">
-        <input type="hidden" name="id" value="34">
-    </button>
-</form>
+<c:choose>
+    <c:when test="${cookie.acceptanceCookie == null}">
+        <p>Informujemy, że ta strona korzysta z plików cookies.</p>
+        </br>
+        <a href="http://localhost:8080/jee_exam_3_war_exploded/homepage">Akceptuj</a>
+    </c:when>
+    <c:otherwise>
+        <p>Witamy</p>
+    </c:otherwise>
+</c:choose>
 
 </body>
 </html>
