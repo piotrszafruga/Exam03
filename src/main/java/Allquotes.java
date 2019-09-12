@@ -14,9 +14,10 @@ public class Allquotes extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/html");
         HttpSession session = request.getSession();
         List<Quote> sessionTexts = (List) session.getAttribute("texts");
-        response.setContentType("text/html");
+
         response.getWriter().append("<table style=\"width:100%\">");
         response.getWriter().append("<tr><th>Author</th><th>content</th><</tr>");
         for (Quote quote: sessionTexts) {
